@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8" />
+    <title>Kevin Hyde - Developer / Designer</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+      <div class="row">
+        <div class="one-half column" style="margin-top: 10%">
+          <div class="row">
+            <div class="full column" style="margin-top: 10%">
+              <h4>Hi, I'm Kevin.</h4>
+              <p>
+                I live in Seattle and make snazzy web sites and graphics for
+                folks like you. Have a look at some of my work, and feel free to
+                <a href="#">get in touch</a>!
+              </p>
+            </div>
+            <!-- <div class="row">
+              <div class="full column" style="margin-top: 5%"> -->
+            <ul class="navigation">
+              <li class="nav-option" data-card="web-development">
+                Web Development
+              </li>
+              <li class="nav-option" data-card="graphic-design">
+                Graphic Design
+              </li>
+              <li class="nav-option" data-card="contact">Contact</li>
+              <li class="nav-option" data-card="blog">Blog</li>
+            </ul>
+            <!-- </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="one-half column" style="margin-top: 10%">
+          <!-- <div class="live-content"> -->
+          <div class="sample-wrapper">
+            <div id="web-development" class="sample off-screen">
+              <img src="" alt="webDev" />
+            </div>
+          </div>
+          <div class="sample-wrapper">
+            <div id="graphic-design" class="sample off-screen">
+              <img src="" alt="graphic-design" />
+            </div>
+          </div>
+          <div class="sample-wrapper">
+            <div id="contact" class="sample off-screen">
+              <img src="" alt="contact" />
+            </div>
+          </div>
+          <div class="sample-wrapper">
+            <div id="blog" class="sample off-screen">
+              <img src="" alt="blog" />
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script>
+      const webDev = document.getElementById("web-development");
+      const graphicDesign = document.getElementById("graphic-design");
+      const contact = document.getElementById("contact");
+      const navOptions = document.querySelectorAll(".nav-option");
+
+      let activeCard;
+
+      const toggleCard = function(card) {
+        let activeCardCheck = () => {
+          return !(activeCard == undefined);
+        };
+        console.log("card", card);
+        // if active card check is true and matches current selection, just add the 'off-screen' class
+        if (activeCardCheck()) {
+          if (activeCard.id === card) {
+            activeCard.classList.toggle("off-screen");
+          } else {
+            activeCard = document.getElementById(card);
+            activeCard.classList.toggle("off-screen");
+          }
+        } else {
+          activeCard = document.getElementById(card);
+          activeCard.classList.toggle("off-screen");
+        }
+      };
+
+      Array.from(navOptions).forEach(navOption => {
+        navOption.addEventListener("click", () => {
+          let selectedCardId = navOption.dataset.card;
+          console.log("click", selectedCardId);
+
+          if (activeCard == undefined) {
+            toggleCard(selectedCardId);
+          } else {
+            activeCard.classList.add("off-screen");
+            toggleCard(selectedCardId);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
