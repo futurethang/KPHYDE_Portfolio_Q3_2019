@@ -67,6 +67,7 @@ body {
 }
 
 .card-details li {
+  cursor: pointer;
   display: inline;
 }
 
@@ -75,19 +76,5 @@ body {
   bottom: -1000px;
   transform: rotate(25deg);
   opacity: 20%;
-}
-
-.sample:after {
-  content: "";
-  position: absolute;
-  /*We can shrink the pseudo element here to hide the shadow edges*/
-  left: 5px;
-  top: 5px;
-  right: 5px;
-  bottom: 5px;
-  /*Shadow - doesn't look good because of the stamp cutout. We can still move this into another pseudo element behind the .stamp main element*/
-
-  /*box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);*/
-  /*pushing it back*/
-  z-index: -1;
+  z-index: -10;
 }
