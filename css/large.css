@@ -1,0 +1,93 @@
+/* for when it's time to biuld the mobile version: https://css-tricks.com/resolution-specific-stylesheets/ */
+
+body {
+  background-color: #f1f0ea;
+}
+
+.navigation {
+  list-style: none;
+}
+
+.navigation li {
+  display: inline;
+  padding-right: 20px;
+  color: #555;
+}
+
+.navigation li:hover {
+  color: #000;
+  cursor: pointer;
+  background-position: -10px -10px;
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.6);
+}
+
+.sample-wrapper {
+  width: 50%;
+  height: 450px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.sample {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 106px;
+  bottom: 40px;
+  height: 400px;
+  width: 340px;
+  /*The stamp cutout will be created using crisp radial gradients*/
+  background: radial-gradient(
+    transparent 0px,
+    transparent 4px,
+    white 4px,
+    white
+  );
+  /*reducing the gradient size*/
+  background-size: 20px 20px;
+  /*Offset to move the holes to the edge*/
+  background-position: -10px -10px;
+  /* -webkit-box-shadow: 6px 4px 5px 0px rgba(235, 235, 235, 1);
+  -moz-box-shadow: 6px 4px 5px 0px rgba(235, 235, 235, 1);
+  box-shadow: 6px 4px 5px 0px rgba(235, 235, 235, 1); */
+  transform: rotate(2deg);
+  opacity: 100%;
+  transition: all 0.3s;
+}
+
+.card-content {
+  width: 93%;
+  height: 96%;
+  background: #fff;
+}
+
+.card-details {
+  list-style: none;
+}
+
+.card-details li {
+  display: inline;
+}
+
+.off-screen {
+  right: -1000px;
+  bottom: -1000px;
+  transform: rotate(25deg);
+  opacity: 20%;
+}
+
+.sample:after {
+  content: "";
+  position: absolute;
+  /*We can shrink the pseudo element here to hide the shadow edges*/
+  left: 5px;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  /*Shadow - doesn't look good because of the stamp cutout. We can still move this into another pseudo element behind the .stamp main element*/
+
+  /*box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);*/
+  /*pushing it back*/
+  z-index: -1;
+}

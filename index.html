@@ -24,7 +24,10 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/skeleton.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel='stylesheet' media='screen and (min-width: 320px) and (max-width: 768px)' href='css/small.css' />
+    <link rel='stylesheet' media='screen and (min-width: 768px) and (max-width: 768px)' href='css/small.css' />
+    <link rel='stylesheet' media='screen and (min-width: 769px)' href='css/large.css' />
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -34,8 +37,8 @@
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container">
-      <div class="row">
-        <div class="one-half column" style="margin-top: 10%">
+      <div class="row row-wrapper">
+        <div id="home-content" class="one-half column">
           <div class="row">
             <div class="full column" style="margin-top: 10%">
               <h4>Hi, I'm Kevin.</h4>
@@ -57,25 +60,105 @@
             </ul>
           </div>
         </div>
-        <div class="one-half column" style="margin-top: 10%">
+        <div id="card-content" class="one-half column">
           <div class="sample-wrapper">
             <div id="web-development" class="sample off-screen">
-              <img src="" alt="webDev" />
+              <div class="card-content">
+                <h3>Web Development</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                  asperiores aspernatur facilis, aut culpa ducimus eos cum,
+                  sapiente tempore obcaecati ea nihil in officiis necessitatibus
+                  fugiat, porro labore quasi veritatis.
+                </p>
+                <h5>Technologies</h5>
+                <ul class="card-details dev-technologies">
+                  <li id="React">
+                    <a href="">React</a>
+                  </li>
+                  <li id="Vue">
+                    <a href="#">
+                      Vue.js
+                    </a>
+                  </li>
+                  <li id="html">HTML</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="sample-wrapper">
             <div id="graphic-design" class="sample off-screen">
-              <img src="" alt="graphic-design" />
+              <div class="card-content">
+                <h3>Web Development</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                  asperiores aspernatur facilis, aut culpa ducimus eos cum,
+                  sapiente tempore obcaecati ea nihil in officiis necessitatibus
+                  fugiat, porro labore quasi veritatis.
+                </p>
+                <h5>Technologies</h5>
+                <ul class="card-details dev-technologies">
+                  <li id="React">
+                    <a href="">React</a>
+                  </li>
+                  <li id="Vue">
+                    <a href="#">
+                      Vue.js
+                    </a>
+                  </li>
+                  <li id="html">HTML</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="sample-wrapper">
             <div id="contact" class="sample off-screen">
-              <img src="" alt="contact" />
+              <div class="card-content">
+                <h3>Web Development</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                  asperiores aspernatur facilis, aut culpa ducimus eos cum,
+                  sapiente tempore obcaecati ea nihil in officiis necessitatibus
+                  fugiat, porro labore quasi veritatis.
+                </p>
+                <h5>Technologies</h5>
+                <ul class="card-details dev-technologies">
+                  <li id="React">
+                    <a href="">React</a>
+                  </li>
+                  <li id="Vue">
+                    <a href="#">
+                      Vue.js
+                    </a>
+                  </li>
+                  <li id="html">HTML</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="sample-wrapper">
             <div id="blog" class="sample off-screen">
-              <img src="" alt="blog" />
+              <div class="card-content">
+                <h3>Web Development</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                  asperiores aspernatur facilis, aut culpa ducimus eos cum,
+                  sapiente tempore obcaecati ea nihil in officiis necessitatibus
+                  fugiat, porro labore quasi veritatis.
+                </p>
+                <h5>Technologies</h5>
+                <ul class="card-details dev-technologies">
+                  <li id="React">
+                    <a href="">React</a>
+                  </li>
+                  <li id="Vue">
+                    <a href="#">
+                      Vue.js
+                    </a>
+                  </li>
+                  <li id="html">HTML</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -89,38 +172,59 @@
       const graphicDesign = document.getElementById("graphic-design");
       const contact = document.getElementById("contact");
       const navOptions = document.querySelectorAll(".nav-option");
+      const optionColors = {
+        "web-development" : "#7DA1C8",
+        "graphic-design" : "#77CCB0",
+        "contact" : "#FEB795",
+        "blog" : "#FDD497",
+      }
 
       let activeCard;
 
-      const toggleCard = function(card) {
+      const consoleLogger = function(message) {
+        console.log(...message);
+        return;
+      };
+
+      const swapCards = function(card) {
+        activeCard = document.getElementById(card);
+        activeCard.classList.toggle("off-screen");
+        swapBgColor(card);
+      };
+
+      const swapBgColor = function(card) {
+        let color = optionColors[card];
+        document.body.style.backgroundColor = color;
+      }
+
+      const cardSelect = function(card) {
+        consoleLogger(["TEST", "card", activeCard]);
         let activeCardCheck = () => {
           return !(activeCard == undefined);
         };
-        console.log("card", card);
-        // if active card check is true and matches current selection, just add the 'off-screen' class
         if (activeCardCheck()) {
+          // if active card check is true and matches current selection, just add the 'off-screen' class
           if (activeCard.id === card) {
-            activeCard.classList.toggle("off-screen");
+            let selectedCard = document.getElementById(card);
+            selectedCard.classList.add("off-screen");
+            activeCard = undefined;
           } else {
-            activeCard = document.getElementById(card);
-            activeCard.classList.toggle("off-screen");
+            swapCards(card);
           }
         } else {
-          activeCard = document.getElementById(card);
-          activeCard.classList.toggle("off-screen");
+          swapCards(card);
         }
       };
 
       Array.from(navOptions).forEach(navOption => {
         navOption.addEventListener("click", () => {
           let selectedCardId = navOption.dataset.card;
-          console.log("click", selectedCardId);
-
+          consoleLogger([activeCard, selectedCardId]);
           if (activeCard == undefined) {
-            toggleCard(selectedCardId);
+            cardSelect(selectedCardId);
           } else {
             activeCard.classList.add("off-screen");
-            toggleCard(selectedCardId);
+            cardSelect(selectedCardId);
           }
         });
       });
