@@ -3,6 +3,10 @@ body {
   background-color: #f1f0ea;
 }
 
+.one-half.column {
+  margin-top: 60px;
+}
+
 .sample {
   /*The stamp cutout will be created using crisp radial gradients*/
   background: radial-gradient(
@@ -15,9 +19,6 @@ body {
   background-size: 20px 20px;
   /*Offset to move the holes to the edge*/
   background-position: -10px -10px;
-  /* -webkit-box-shadow: 6px 4px 5px 0px rgba(235, 235, 235, 1);
-  -moz-box-shadow: 6px 4px 5px 0px rgba(235, 235, 235, 1);
-  box-shadow: 6px 4px 5px 0px rgba(235, 235, 235, 1); */
   transform: rotate(2deg);
   opacity: 100%;
   transition: all 0.3s;
