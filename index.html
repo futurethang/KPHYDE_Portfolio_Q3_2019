@@ -82,7 +82,7 @@
         </div>
         <div id="card-content" class="one-half column">
           <div class="sample-wrapper">
-            <div id="web-development" class="sample off-screen">
+            <div id="web-development" class="sample">
               <div class="card-content">
                 <h3 id="webdev">Web Development</h3>
                 <p>
@@ -126,7 +126,7 @@
             </div>
           </div>
           <div class="sample-wrapper">
-            <div id="graphic-design" class="sample off-screen">
+            <div id="graphic-design" class="sample">
               <div class="card-content">
                 <h3>Graphic Design</h3>
                 <p>
@@ -182,7 +182,7 @@
             </div>
           </div>
           <div class="sample-wrapper">
-            <div id="contact" class="sample off-screen">
+            <div id="contact" class="sample">
               <div class="card-content">
                 <h3>Contact Me</h3>
                 <p>
@@ -204,7 +204,7 @@
             </div>
           </div>
           <div class="sample-wrapper">
-            <div id="blog" class="sample off-screen">
+            <div id="blog" class="sample">
               <div class="card-content">
                 <h3>Web Development</h3>
                 <p>
@@ -256,7 +256,7 @@
 
       const swapCards = function(card) {
         activeCard = document.getElementById(card);
-        activeCard.classList.toggle("off-screen");
+        activeCard.classList.toggle("on-screen");
         swapBgColor(card);
       };
 
@@ -274,7 +274,7 @@
           // if active card check is true and matches current selection, just add the 'off-screen' class
           if (activeCard.id === card) {
             let selectedCard = document.getElementById(card);
-            selectedCard.classList.add("off-screen");
+            selectedCard.classList.remove("on-screen");
             activeCard = undefined;
           } else {
             swapCards(card);
@@ -291,7 +291,7 @@
           if (activeCard == undefined) {
             cardSelect(selectedCardId);
           } else {
-            activeCard.classList.add("off-screen");
+            activeCard.classList.remove("on-screen");
             cardSelect(selectedCardId);
           }
         });
