@@ -1,0 +1,44 @@
+.sample {
+  /*The stamp cutout will be created using crisp radial gradients*/
+  background: radial-gradient(
+    transparent 0px,
+    transparent 4px,
+    white 4px,
+    white
+  );
+  /*reducing the gradient size*/
+  background-size: 20px 20px;
+  /*Offset to move the holes to the edge*/
+  background-position: -10px -10px;
+  /* -webkit-box-shadow: 6px 4px 5px 0px rgba(235, 235, 235, 1);
+  -moz-box-shadow: 6px 4px 5px 0px rgba(235, 235, 235, 1);
+  box-shadow: 6px 4px 5px 0px rgba(235, 235, 235, 1); */
+  transform: rotate(2deg);
+  opacity: 100%;
+  transition: all 0.3s;
+}
+
+
+.card-content {
+  width: 93%;
+  height: 96%;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.card-content h3 {
+  font-size: 2.6rem;
+}
+.card-content p {
+  font-size: 1.25rem;
+}
+
+.card-details {
+  list-style: none;
+}
+
+.card-details li {
+  cursor: pointer;
+  display: inline;
+}

@@ -24,9 +24,22 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/skeleton.css" />
-    <link rel='stylesheet' media='screen and (min-width: 320px) and (max-width: 768px)' href='css/small.css' />
-    <link rel='stylesheet' media='screen and (min-width: 768px) and (max-width: 768px)' href='css/small.css' />
-    <link rel='stylesheet' media='screen and (min-width: 769px)' href='css/large.css' />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 320px) and (max-width: 768px)"
+      href="css/small.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 768px) and (max-width: 768px)"
+      href="css/small.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 769px)"
+      href="css/large.css"
+    />
+    <link rel="stylesheet" href="./css/top-styles.css" />
     <!-- <link rel="stylesheet" href="css/styles.css" /> -->
 
     <!-- Favicon
@@ -47,16 +60,23 @@
                 folks like you. Have a look at some of my work, and feel free to
                 <a href="#">get in touch</a>!
               </p>
+              <p>
+                <a href="https://www.linkedin.com/in/kevin-hyde-fullstack/"
+                  >LinkedIn</a
+                >
+                <a href="https://github.com/futurethang">GitHub</a>
+              </p>
             </div>
             <ul class="navigation">
               <li class="nav-option" data-card="web-development">
-                Web Development
+                Development
               </li>
               <li class="nav-option" data-card="graphic-design">
-                Graphic Design
+                Design
               </li>
-              <li class="nav-option" data-card="contact">Contact</li>
+              <li class="nav-option" data-card="about">About</li>
               <li class="nav-option" data-card="blog">Blog</li>
+              <li class="nav-option" data-card="contact">Contact</li>
             </ul>
           </div>
         </div>
@@ -64,27 +84,43 @@
           <div class="sample-wrapper">
             <div id="web-development" class="sample off-screen">
               <div class="card-content">
-                <h3>Web Development</h3>
+                <h3 id="webdev">Web Development</h3>
                 <p>
-                  Great-looking, high-performing web applications are my forte. I specialize in Frontend development with JavaScript frameworks, but know my Node.js and can navigate the whole dang stack. 
+                  Great-looking, high-performing web applications are my forte.
+                  I specialize in Frontend development with JavaScript
+                  frameworks, but love my Node.js and can work with the whole
+                  dang stack.
                 </p>
-                <h5>Technologies</h5>
+                <a href="" class="portfolio_link"><h5>Portfolio --></h5></a>
+                <h6>Technologies</h6>
                 <ul class="card-details dev-technologies">
                   <li id="React">
                     <a href="https://reactjs.org/" target="_blank">React</a>
                   </li>
                   <li id="Vue">
-                    <a href="#">
+                    <a href="https://vuejs.org/" target="_blank">
                       Vue
                     </a>
                   </li>
-                  <li><a href="#">HTML</a></li>
-                  <li><a href="#">SASS</a></li>
-                  <li><a href="#">Node</a></li>
-                  <li><a href="#">Express</a></li>
-                  <li><a href="#">MongoDB</a></li>
-                  <li><a href="#">MySQL</a></li>
-                  <li><a href="#">Etc.</a></li>
+                  <li><a href="https://html.com/" target="blank">HTML</a></li>
+                  <li>
+                    <a href="https://sass-lang.com/" target="blank">SASS</a>
+                  </li>
+                  <li><a href="https://nodejs.org/" target="blank">Node</a></li>
+                  <li>
+                    <a href="https://expressjs.com/" target="blank">Express</a>
+                  </li>
+                  <li>
+                    <a href="https://www.mongodb.com/" target="blank"
+                      >MongoDB</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.mysql.com/" target="blank">MySQL</a>
+                  </li>
+                  <li>
+                    <a href="https://www.npmjs.com/" target="blank">NPM</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -92,27 +128,55 @@
           <div class="sample-wrapper">
             <div id="graphic-design" class="sample off-screen">
               <div class="card-content">
-                <h3>Web Development</h3>
+                <h3>Graphic Design</h3>
                 <p>
-                  Great-looking, high-performing web applications are my forte. I specialize in Frontend development with JavaScript frameworks, but know my Node.js and can navigate the whole dang stack. 
+                  Web, Print, Interaction . . . If human beings need to make
+                  sense of it, I have the skills and knowledge to make it look
+                  great and go to work. I love a problem that can be solved with
+                  palettes, typography, and animations.
                 </p>
-                <h5>Technologies</h5>
+                <a href="" class="portfolio_link"><h5>Portfolio --></h5></a>
+                <h6>Technologies</h6>
                 <ul class="card-details dev-technologies">
-                  <li id="React">
-                    <a href="#">React</a>
+                  <li>
+                    <a
+                      href="https://www.adobe.com/products/illustrator/free-trial-download.html"
+                      target="blank"
+                      >Illustrator</a
+                    >
                   </li>
-                  <li id="Vue">
-                    <a href="#">
-                      Vue
+                  <li>
+                    <a
+                      href="https://www.adobe.com/products/indesign.html"
+                      target="blank"
+                    >
+                      InDesign
                     </a>
                   </li>
-                  <li><a href="#">HTML</a></li>
-                  <li><a href="#">SASS</a></li>
-                  <li><a href="#">Node</a></li>
-                  <li><a href="#">Express</a></li>
-                  <li><a href="#">MongoDB</a></li>
-                  <li><a href="#">MySQL</a></li>
-                  <li><a href="#">Etc.</a></li>
+                  <li>
+                    <a
+                      href="https://www.adobe.com/products/photoshop.html"
+                      target="blank"
+                      >PhotoShop</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.adobe.com/products/xd.html"
+                      target="blank"
+                      >Adobe XD</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.sketch.com/" target="blank">Sketch</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.w3schools.com/Css/css_intro.asp"
+                      target="blank"
+                      >CSS</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
@@ -120,24 +184,21 @@
           <div class="sample-wrapper">
             <div id="contact" class="sample off-screen">
               <div class="card-content">
-                <h3>Web Development</h3>
+                <h3>Contact Me</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                  asperiores aspernatur facilis, aut culpa ducimus eos cum,
-                  sapiente tempore obcaecati ea nihil in officiis necessitatibus
-                  fugiat, porro labore quasi veritatis.
+                  I'm always looking for exciting new opportunities to work
+                  full-time, contract, freelance, or provide mentorship to young
+                  coders.
                 </p>
-                <h5>Technologies</h5>
-                <ul class="card-details dev-technologies">
-                  <li id="React">
-                    <a href="">React</a>
+                <ul class="card-details">
+                  <li>
+                    <a href="https://www.linkedin.com/in/kevin-hyde-fullstack/"
+                      >LinkedIn</a
+                    >
                   </li>
-                  <li id="Vue">
-                    <a href="#">
-                      Vue.js
-                    </a>
+                  <li>
+                    <a href="https://github.com/futurethang">GitHub</a>
                   </li>
-                  <li id="html">HTML</li>
                 </ul>
               </div>
             </div>
@@ -152,7 +213,8 @@
                   sapiente tempore obcaecati ea nihil in officiis necessitatibus
                   fugiat, porro labore quasi veritatis.
                 </p>
-                <h5>Technologies</h5>
+                <a href="" class="portfolio_link"><h5>Portfolio --></h5></a>
+                <h6>Technologies</h6>
                 <ul class="card-details dev-technologies">
                   <li id="React">
                     <a href="">React</a>
@@ -179,11 +241,11 @@
       const contact = document.getElementById("contact");
       const navOptions = document.querySelectorAll(".nav-option");
       const optionColors = {
-        "web-development" : "#7DA1C8",
-        "graphic-design" : "#77CCB0",
-        "contact" : "#FEB795",
-        "blog" : "#FDD497",
-      }
+        "web-development": "#7DA1C8",
+        "graphic-design": "#77CCB0",
+        contact: "#FEB795",
+        blog: "#FDD497"
+      };
 
       let activeCard;
 
@@ -201,7 +263,7 @@
       const swapBgColor = function(card) {
         let color = optionColors[card];
         document.body.style.backgroundColor = color;
-      }
+      };
 
       const cardSelect = function(card) {
         consoleLogger(["TEST", "card", activeCard]);
