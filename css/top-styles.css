@@ -7,10 +7,6 @@ body {
   margin-top: 60px;
 }
 
-.one-half.column.cards {
-  margin-top: 0;
-}
-
 .sample {
   /*The stamp cutout will be created using crisp radial gradients*/
   background: radial-gradient(

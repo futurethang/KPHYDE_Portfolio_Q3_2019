@@ -55,7 +55,12 @@
 }
 
 .one-half.column {
+  margin-top: 40px;
   width: 100%;
+}
+
+.one-half.column.cards {
+  margin-top: 0;
 }
 
 .column {
