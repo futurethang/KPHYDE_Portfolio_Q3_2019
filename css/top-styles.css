@@ -1,3 +1,6 @@
+html {
+  height: 100%;
+}
 
 body {
   background-color: #f1f0ea;
@@ -47,4 +50,9 @@ body {
 .card-details li {
   cursor: pointer;
   display: inline;
+}
+
+footer {
+  position: relative;
+  bottom: 0px;
 }
