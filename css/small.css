@@ -1,9 +1,5 @@
 /* for when it's time to biuld the mobile version: https://css-tricks.com/resolution-specific-stylesheets/ */
 
-body {
-  background-color: #f1f0ea;
-}
-
 .row-wrapper {
   display: flex;
   flex-direction: column;
@@ -41,8 +37,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 16px;
-  top: 10px;
+  left: 1000px;
+  top: 1000px;
   height: 400px;
   width: 340px;
   z-index: 1;
@@ -50,16 +46,21 @@ body {
 }
 
 
-.off-screen {
-  left: 1000px;
-  top: 1000px;
+.on-screen {
+  left: 16px;
+  top: 10px;
   transform: rotate(25deg);
   opacity: 20%;
-  z-index: -10;
+  z-index: 10000;
 }
 
 .one-half.column {
+  margin-top: 40px;
   width: 100%;
+}
+
+.one-half.column.cards {
+  margin-top: 0;
 }
 
 .column {
