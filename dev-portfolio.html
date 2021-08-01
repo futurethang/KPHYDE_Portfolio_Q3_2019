@@ -56,7 +56,11 @@
             <div class="full column">
               <h4>Web Development</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae at molestiae illum vitae. Iste repudiandae, asperiores facere quis blanditiis magni exercitationem ipsam voluptas reiciendis nemo temporibus, iusto consequatur, perspiciatis explicabo!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae at molestiae illum vitae. Iste repudiandae,
+                asperiores facere quis blanditiis magni exercitationem ipsam
+                voluptas reiciendis nemo temporibus, iusto consequatur,
+                perspiciatis explicabo!
               </p>
               <p>
                 <a href="https://www.linkedin.com/in/kevin-hyde-fullstack/"
@@ -69,11 +73,7 @@
               <li class="nav-option" data-card="web-development">
                 Development
               </li>
-              <li class="nav-option" data-card="graphic-design">
-                Design
-              </li>
-              <li class="nav-option" data-card="about">About</li>
-              <li class="nav-option" data-card="blog">Blog</li>
+              <li class="nav-option" data-card="graphic-design">Design</li>
               <li class="nav-option" data-card="contact">Contact</li>
             </ul>
           </div>
@@ -96,9 +96,7 @@
                     <a href="https://reactjs.org/" target="_blank">React</a>
                   </li>
                   <li id="Vue">
-                    <a href="https://vuejs.org/" target="_blank">
-                      Vue
-                    </a>
+                    <a href="https://vuejs.org/" target="_blank"> Vue </a>
                   </li>
                   <li><a href="https://html.com/" target="blank">HTML</a></li>
                   <li>
@@ -201,32 +199,6 @@
               </div>
             </div>
           </div>
-          <div class="sample-wrapper">
-            <div id="blog" class="sample">
-              <div class="card-content">
-                <h3>Web Development</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                  asperiores aspernatur facilis, aut culpa ducimus eos cum,
-                  sapiente tempore obcaecati ea nihil in officiis necessitatibus
-                  fugiat, porro labore quasi veritatis.
-                </p>
-                <a href="" class="portfolio_link"><h5>Portfolio --></h5></a>
-                <h6>Technologies</h6>
-                <ul class="card-details dev-technologies">
-                  <li id="React">
-                    <a href="">React</a>
-                  </li>
-                  <li id="Vue">
-                    <a href="#">
-                      Vue.js
-                    </a>
-                  </li>
-                  <li id="html">HTML</li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -241,31 +213,30 @@
       const optionColors = {
         "web-development": "#E2F9FB",
         "graphic-design": "#CBF0F4",
-        "about": "#FFF2E6", //orange-y - should go last
-        "blog": "#B2E6EA",
-        "contact": "#99D8DD",
+        about: "#FFF2E6", //orange-y - should go last
+        blog: "#B2E6EA",
+        contact: "#99D8DD",
       };
-      
 
       let activeCard;
 
-      const consoleLogger = function(message) {
+      const consoleLogger = function (message) {
         console.log(...message);
         return;
       };
 
-      const swapCards = function(card) {
+      const swapCards = function (card) {
         activeCard = document.getElementById(card);
         activeCard.classList.toggle("on-screen");
         swapBgColor(card);
       };
 
-      const swapBgColor = function(card) {
+      const swapBgColor = function (card) {
         let color = optionColors[card];
         document.body.style.backgroundColor = color;
       };
 
-      const cardSelect = function(card) {
+      const cardSelect = function (card) {
         consoleLogger(["TEST", "card", activeCard]);
         let activeCardCheck = () => {
           return !(activeCard == undefined);
@@ -284,7 +255,7 @@
         }
       };
 
-      Array.from(navOptions).forEach(navOption => {
+      Array.from(navOptions).forEach((navOption) => {
         navOption.addEventListener("click", () => {
           let selectedCardId = navOption.dataset.card;
           consoleLogger([activeCard, selectedCardId]);
